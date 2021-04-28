@@ -1,0 +1,4 @@
+<launch>
+    <node name="attitude_controller" pkg="vitarana_drone" type="attitude_controller.py"/>
+    <node name="position_controller" pkg="vitarana_drone" type="position_controller.py"/>
+</launch>

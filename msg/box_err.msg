@@ -1,0 +1,3 @@
+bool detected
+float64 err_roll_m
+float64 err_pitch_m

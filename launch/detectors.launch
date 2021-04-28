@@ -1,0 +1,4 @@
+<launch>
+    <!-- <node name="qr_detect_service" type="qr_detect.py" pkg="vitarana_drone"/> -->
+    <node name="marker_detector" type="marker_detect.py" pkg="vitarana_drone"/>
+</launch>

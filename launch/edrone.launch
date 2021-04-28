@@ -1,0 +1,19 @@
+<launch>
+    <arg name="record" default="false"/>
+    <arg name="duration" default="60"/>
+    <arg name="rec_name" default="Task_1_VD.bag"/>
+
+    <group if="$(arg record)">
+        <node name="rosbag_record_position" pkg="rosbag" type="record"
+           args="record -O $(find vitarana_drone)/bag_files/$(arg rec_name) --duration=$(arg duration) /edrone/pwm" output="screen"/>
+    </group>   
+
+    <include file="$(find vitarana_drone)/launch/task_1.launch"/>
+
+    <include file="$(find timed_roslaunch)/timed_roslaunch.launch">
+        <arg name="node_name" value="controllers" />
+        <arg name="time" value="1" />
+        <arg name="pkg" value="vitarana_drone" />
+        <arg name="file" value="controllers.launch" />
+    </include>
+</launch>
