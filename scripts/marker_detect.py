@@ -221,5 +221,5 @@ if __name__ == '__main__':
 	obj = MarkerDetector()
 	r = rospy.Rate(10)
 	while not rospy.is_shutdown():
-		obj.my_custom_algorithm()
+            obj.harr_cascade()
 		r.sleep()

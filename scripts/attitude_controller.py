@@ -22,7 +22,7 @@ from sensor_msgs.msg import Imu
 from std_msgs.msg import Float32
 import rospy
 import time
-import tfthrottle
+import tf
 import numpy as np
 from math import sin, cos, pi, sqrt
 
